@@ -3,10 +3,10 @@ from setuptools import setup, find_packages
 setup(
     name='rrequested_pkg',
     version='1.2.0',
-    description='RREQUESTED: A versatile package to preprocess raw basecalled reads with quality and size filtering and ex-novo demultiplexing',
+    description='rrequested-pkg: A versatile package to preprocess raw basecalled reads with quality and size filtering and ex-novo demultiplexing',
     author='Astra Bertelli',
     author_email='astra.bertelli01@universitadipavia.it',
-    url='https://github.com/AstraBert/RREQUESTED',
+    url='https://github.com/AstraBert/rrequested-pkg',
     packages=find_packages(),
     install_requires=[
         'biopython==1.81',
