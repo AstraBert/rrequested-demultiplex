@@ -1,8 +1,8 @@
-#  rrequested-pkg 
+#  rrequested-demultiplex
 
 ### -General purpose and applicability
 
-rrequested-pkg is the python package distribution of the modular shellscript tool RREQUESTED (Raw REads QUality Extraction, Size Trimming and Ex-novo Demultiplexing). It is aimed at preprocessing (quality filtering, size selection and demultiplexing) of raw basecalled reads, especially produced by Oxford Nanopore, a Third Generation Sequencing technology.
+rrequested-demultiplex is the python package distribution of the modular shellscript tool RREQUESTED (Raw REads QUality Extraction, Size Trimming and Ex-novo Demultiplexing). It is aimed at preprocessing (quality filtering, size selection and demultiplexing) of raw basecalled reads, especially produced by Oxford Nanopore, a Third Generation Sequencing technology.
 
 Even though the program has been tested only on Nanopore sequencing results, the program could be cautiously applied also to products from NGS or other ThirdGen technologies. 
 
@@ -12,12 +12,12 @@ The basic requirment for this installation is to have python 3.10 installed on y
 
 To install the package, just run:
 ```
-pip install rrequested-pkg
+pip install rrequested-demultiplex
 ```
 
 You can retrieve general information on it by running:
 ```
-pip show rrequested-pkg
+pip show rrequested-demultiplex
 ```
 
 ### -Functions and usage
@@ -40,7 +40,7 @@ Here are some example usages of the package:
 
 ```python
 # Import necessary modules
-from rrequested_pkg.size_filter import Size_Filter
+from rrequested_demultiplex.size_filter import Size_Filter
 
 # Specify input file, minimum size, and maximum size
 input_file = "your_input_file.fastq"
@@ -61,7 +61,7 @@ filtered_data = size_filter_instance.size_filter()
 
 ```python
 # Import necessary modules
-from rrequested_pkg.quality_filter import Quality_Filter
+from rrequested_demultiplex.quality_filter import Quality_Filter
 
 # Specify input file and quality threshold
 input_file = "your_input_file.fastq"
@@ -80,7 +80,7 @@ quality_filter_instance.filter()
 **FileSystem**
 ```python
 # Import necessary modules
-from rrequested_pkg.file_system import FileSystem
+from rrequested_demultiplex.file_system import FileSystem
 
 # Create an instance of FileSystem
 file_system_instance = FileSystem()
@@ -103,7 +103,7 @@ print("Base Directory of the Base Directory:", base_basedir)
 **Unreferenced_Demultiplexing**
 ```python
 # Import necessary modules
-from rrequested_pkg.unreferenced_demultiplexing import Unreferenced_Demultiplexing
+from rrequested_demultiplex.unreferenced_demultiplexing import Unreferenced_Demultiplexing
 
 # Specify input file
 input_file = "input_file.fasta"
@@ -129,9 +129,9 @@ demultiplex_instance.demultiplex()
 
 
 ### -Final considerations ###
-As a practical suggestion, we strongly advise to be cautious while using rrequested-pkg with files containing reads from multiple individuals, especially if the quality of the data is low: not because there is the risk that you will miss something, but because it can produce more groups than needed.
+As a practical suggestion, we strongly advise to be cautious while using rrequested-demultiplex with files containing reads from multiple individuals, especially if the quality of the data is low: not because there is the risk that you will miss something, but because it can produce more groups than needed.
 
-Moreover, please note that rrequested-pkg is still experimental and may contain errors, may fail/take really long while performing large analyses with limited computational power (e.g. on a normal laptop) and may output not-100%-reliable results, so always check them and pull issues whenever you feel it to be the case, we'll be on your back as soon as possible to fix/implement/enhance whatever you suggest!
+Moreover, please note that rrequested-demultiplex is still experimental and may contain errors, may fail/take really long while performing large analyses with limited computational power (e.g. on a normal laptop) and may output not-100%-reliable results, so always check them and pull issues whenever you feel it to be the case, we'll be on your back as soon as possible to fix/implement/enhance whatever you suggest!
 
 
 ### -License and rights of usage
